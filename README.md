@@ -2,13 +2,13 @@
 
 ## Description
 
-FLRAgent is a powerful tool designed to interact with Flare Network (Coston2 testnet). It leverages OpenAI's GPT-4o-mini model to provide a conversational interface for users to perform various blockchain operations, such as checking wallet balances, sending transactions, and deploying smart contracts. The assistant embodies the persona of Darth Vader, delivering responses with a commanding and cryptic tone.
+FLRAgent is a powerful tool designed to interact with Flare Network. It leverages OpenAI's GPT-4o-mini model to provide a conversational interface for users to perform various blockchain operations, such as checking wallet balances, sending transactions, and deploying smart contracts. The assistant embodies the persona of Darth Vader, delivering responses with a commanding and cryptic tone.
 
 ## Features
 
 - **Conversational Interface**: Engage with the assistant to perform blockchain operations through natural language.
 - **Wallet Operations**: Check wallet balances and retrieve connected wallet addresses.
-- **Transaction Management**: Send transactions with customizable parameters.
+- **Transaction Management**: Send transactions with customizable parameters, ask for prices to swap and make swaps using [SparkDex](https://sparkdex.ai/).
 - **Smart Contract Interaction**: Deploy ERC20 tokens and interact with existing contracts.
 - **Error Handling**: Robust error handling and feedback for failed operations.
 
@@ -60,6 +60,7 @@ The assistant has access to various tools for performing blockchain operations:
 #### Read Operations
 - **get_balance**: Check wallet balances on the Flare testnet
 - **get_wallet_address**: Retrieve the connected wallet's address
+- **get_amount_from_spark_dex**: Get the amount to receive making a swap in SparkDex.
 
 #### Write Operations
 - **send_transaction**: Send transactions with customizable parameters including:
@@ -73,6 +74,9 @@ The assistant has access to various tools for performing blockchain operations:
   - Customizable token name and symbol
   - Configurable initial supply
   - Standard ERC20 functionality
+- **make_swap**: Swap from a token to another.
+  - Specify the tokens to swap (just the name, the agent converts to contract ids).
+  - Enter the amount to swap.
 
 ## Codebase Flow
 

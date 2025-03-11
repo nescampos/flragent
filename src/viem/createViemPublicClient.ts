@@ -1,8 +1,8 @@
 import { createPublicClient, http } from "viem";
-import { flareTestnet } from "viem/chains";
+import { flare } from "viem/chains";
 
 /**
- * Creates a new public Viem client connected to the Flare testnet.
+ * Creates a new public Viem client connected to the Flare.
  *
  * A public client is a client that is not connected to a specific wallet and
  * therefore cannot perform write operations.
@@ -14,9 +14,9 @@ export function createViemPublicClient() {
     /**
      * The chain to connect to.
      *
-     * In this case, we're using the Flare testnet.
+     * In this case, we're using the Flare.
      */
-    chain: flareTestnet,
+    chain: flare,
 
     /**
      * The transport to use for HTTP requests.
