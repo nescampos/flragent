@@ -3,6 +3,7 @@ import { getWalletAddressTool } from "./getWalletAddress";
 import { sendTransactionTool } from "./sendTransction";
 import { deployErc20Tool } from "./deployERC20";
 import { getPriceFromSparkDexTool } from "./getPriceFromSparkDex";
+import { swapTokensTool } from "./swapTokens";
 
 export interface ToolConfig<T = any> {
   /**
@@ -51,4 +52,8 @@ export const tools: Record<string, ToolConfig> = {
    * Deploy an ERC20 token.
    */
   deploy_erc20: deployErc20Tool,
+  /**
+   * Swap tokens
+   */
+   swap_tokens: swapTokensTool,
 };

@@ -1,4 +1,4 @@
-import { createWalletClient, http } from "viem";
+import { createWalletClient, http, publicActions } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { flare } from "viem/chains";
 
@@ -28,5 +28,5 @@ export function createViemWalletClient() {
     account,
     chain: flare,
     transport: http(),
-  });
+  }).extend(publicActions);
 }
