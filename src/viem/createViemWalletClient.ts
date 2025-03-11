@@ -1,6 +1,6 @@
 import { createWalletClient, http } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import { flareTestnet } from "viem/chains";
+import { flare } from "viem/chains";
 
 /**
  * Creates a new Viem wallet client connected to the Flare testnet.
@@ -26,7 +26,7 @@ export function createViemWalletClient() {
   // Create the wallet client
   return createWalletClient({
     account,
-    chain: flareTestnet,
+    chain: flare,
     transport: http(),
   });
 }
